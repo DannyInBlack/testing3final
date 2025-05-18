@@ -1,10 +1,27 @@
-import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
+import { Given, When, Then, Before, BeforeAll } from "@badeball/cypress-cucumber-preprocessor";
+import Nav from "../POM/navigate";
+import Env from "../POM/env";
+import Home from "../POM/home-pom";
+
+const env = new Env();
+const nav = new Nav();
+const home = new Home();
+
+BeforeAll(() => {
+  env.loadData();
+});
+
+Before(() => {
+  nav.setRoutes(env.data.routes);
+});
 
 Given('Navigate to Website URL', () => {
-
+  nav.visit("home");
 })
 
-When('Click on signup', () => {})
+When('Click on signup', () => {
+  home.signupLogin();
+})
 
 When('Fill signup form', () => {})
 

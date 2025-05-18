@@ -1,8 +1,12 @@
 {
-  "pages": {
+  "routes": {
     "home": {
-      "url": "https://www.automationexercise.com/",
+      "path": "/",
       "title": "Automation Exercise"
+    },
+    "login": {
+      "path": "/login",
+      "title": "Signup / Login"
     }
   }
 }
