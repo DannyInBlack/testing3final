@@ -2,10 +2,14 @@ import { Given, When, Then, Before, BeforeAll } from "@badeball/cypress-cucumber
 import Nav from "../POM/navigate";
 import Env from "../POM/env";
 import Home from "../POM/home-pom";
+import Signup from "../POM/signup-pom";
+import Login from "../POM/login-pom";
 
 const env = new Env();
 const nav = new Nav();
 const home = new Home();
+const signup = new Signup();
+const login = new Login();
 
 BeforeAll(() => {
   env.loadData();
@@ -21,13 +25,22 @@ Given('Navigate to Website URL', () => {
 
 When('Click on signup', () => {
   home.signupLogin();
+  nav.setCurrentRoute("login");
 })
 
-When('Fill signup form', () => {})
+When('Fill signup form', () => {
+  signup.validate();
+  signup.fillPreForm(env.data.validSignup);
+  nav.setCurrentRoute("signup");
+})
 
-When('Fill login form', () => {})
+When('Fill login form', () => {
+  // return "skipped";
+})
 
-When('Fill out registration form', () => {})
+When('Fill out registration form', () => {
+  // return "skipped";
+})
 
 When('Verify account creation success', () => {})
 

@@ -1,4 +1,8 @@
 {
+  "validSignup": {
+    "name": "Daniel",
+    "email": "dannyboy@gmail.com"
+  },
   "routes": {
     "home": {
       "path": "/",
@@ -7,6 +11,10 @@
     "login": {
       "path": "/login",
       "title": "Signup / Login"
+    },
+    "signup": {
+      "path": "/signup",
+      "title": "Signup"
     }
   }
 }
