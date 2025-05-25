@@ -1,7 +1,9 @@
 {
   "validSignup": {
     "name": "Daniel",
-    "email": "dannyboy@gmail.com"
+    "email": "dannyboy@gmail.com",
+    "title": "Eng.",
+    "password": "WowMyPassIsGreat",
   },
   "routes": {
     "home": {

@@ -29,7 +29,7 @@ When('Click on signup', () => {
 })
 
 When('Fill signup form', () => {
-  signup.validate();
+  signup.validatePreForm();
   signup.fillPreForm(env.data.validSignup);
   nav.setCurrentRoute("signup");
 })
@@ -39,6 +39,8 @@ When('Fill login form', () => {
 })
 
 When('Fill out registration form', () => {
+  signup.validateMainForm();
+  
   // return "skipped";
 })
 

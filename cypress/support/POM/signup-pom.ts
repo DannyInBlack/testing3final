@@ -5,8 +5,12 @@ interface PreFormData {
 
 export default class Signup {
 
-  validate() {
+  validatePreForm() {
     cy.get(".signup-form>h2").should('include.text', "New User Signup!");
+  }
+  
+  validateMainForm() {
+    cy.get(".login-form>h2").should('include.text', "New User Signup!");
   }
 
   fillPreForm(data: PreFormData) {
